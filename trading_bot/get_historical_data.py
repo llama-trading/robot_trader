@@ -34,7 +34,7 @@ for each in alpha:
     table = soup.find('table', {'class': 'quotes'})
     for row in table.findAll('tr')[1:]:
         symbols.append(row.findAll('td')[0].text.rstrip())
-        
+
 # Remove the extra letters on the end
 symbols_clean = []
 
@@ -97,7 +97,7 @@ df = pd.DataFrame(
         'open': open_l,
         'high': high_l,
         'low': low_l,
-        'close': close_l, 
+        'close': close_l,
         'volume': volume_l,
         'date': date_l
     }
